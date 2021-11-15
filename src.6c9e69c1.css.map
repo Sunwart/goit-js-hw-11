@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/_example.scss"],"names":[],"mappings":"AAAA,EACE,sBAGF,KACE,yCAAA,CACA,qBAAA,CACA","file":"src.6c9e69c1.css","sourceRoot":"../src","sourcesContent":["* {\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: 'Segoe UI', 'Open Sans', sans-serif;\n  background-color: #eeeeee;\n  color: #1c212a;\n}\n"]}
