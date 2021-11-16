@@ -1,6 +1,8 @@
 import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
 
+import { PER_PAGE } from '../index';
+
 export default class imagesAPIService {
   constructor() {
     this.searchQuery = '';
@@ -12,7 +14,7 @@ export default class imagesAPIService {
     const url = 'https://pixabay.com/api/?key=24356494-65e5de300274261a131c8d68e';
 
     const images = await axios.get(
-      `${url}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=40`,
+      `${url}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=${PER_PAGE}`,
     );
 
     this.totalHits = images.data.totalHits;

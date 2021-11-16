@@ -4,7 +4,7 @@ import Notiflix from 'notiflix';
 import ImagesAPIService from './js/imagesAPIService';
 import { hideLoadMoreBtn, showLoadMoreBtn, imagesMarkup } from './js/imagesMarkup';
 
-const PER_PAGE = 40;
+export const PER_PAGE = 40;
 
 const refs = {
   searchForm: document.querySelector('.search-form'),
@@ -58,7 +58,7 @@ function onFound(total) {
     Notiflix.Notify.success(`Hooray! We found ${total} images.`);
   }
 
-  if (total > PER_PAGE) {
+  if (total > PER_PAGE && imagesAPIService.page > 1) {
     showLoadMoreBtn();
   }
 }
