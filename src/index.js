@@ -26,7 +26,6 @@ function onSearch(event) {
   if (imagesAPIService.query === '' || imagesAPIService.query === ' ') {
     Notiflix.Notify.info('Enter your query to search images.');
     renderImages('');
-    hideLoadMoreBtn();
     return;
   }
   imagesAPIService.getImages().then(imagesMarkup).then(renderImages).then(onFound);
