@@ -20,7 +20,7 @@ refs.loadMoreButton.addEventListener('click', onLoadMore);
 
 function onSearch(event) {
   event.preventDefault();
-
+  hideLoadMoreBtn();
   imagesAPIService.query = event.currentTarget.elements.searchQuery.value;
   imagesAPIService.resetPage();
   if (imagesAPIService.query === '' || imagesAPIService.query === ' ') {
